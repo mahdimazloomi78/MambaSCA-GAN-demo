@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>دمو گفتار — عنوان مدل شما</title>
+
 <style>
     :root{
       --bg:#0b1020; --panel:#0e162c; --muted:#9fb0c7; --text:#e6eaf0; --accent:#22c55e; --accent2:#60a5fa;
@@ -12,13 +12,13 @@
     *{box-sizing:border-box}
     html,body{height:100%}
     body{margin:0; font-family:Vazirmatn,Segoe UI,Roboto,Tahoma,sans-serif; color:var(--text); background:var(--bg)}
-    /* تصویر پس‌زمینه صفحه */
+    
     body::before{
       content:""; position:fixed; inset:0; z-index:-2;
       background:url('img/bg.jpg') center/cover no-repeat fixed;
       filter:brightness(.35) saturate(1.1);
     }
-    /* لایه تار برای خوانایی متن */
+   
     body::after{
       content:""; position:fixed; inset:0; z-index:-1; backdrop-filter: blur(4px);
       background: radial-gradient(1000px 500px at 85% -10%, rgba(14,22,44,.7), transparent);
@@ -202,9 +202,9 @@ section[aria-label^="Out-of-Train"] .imgbox img{ width:100%; height:100%; object
 <body>
 <div class="wrap">
 <header>
-<h1 class="title">عنوان مدل شما</h1>
-<p class="authors">نام نویسندگان: <span>نام نویسنده ۱</span> • <span>نام نویسنده ۲</span> • <span>نام نویسنده ۳</span></p>
-<p class="tag">این صفحه آفلاین/آنلاین کار می‌کند — تصویر پس‌زمینه را با <code>img/bg.jpg</code> عوض کنید</p>
+<h1 class="title">Single-Channel Speech Enhancement at Low-SNR using the Mamba-Integrated GAN (MambaSCA-GAN)</h1>
+<p class="authors">Mahdi Mazloomi</span> • <span>Rahil Mahdian</span> • <span>Hassan Zareian</span></p>
+
 </header>
 <div class="section dataset-title">VoiceBank+DEMAND Dataset</div>
 <section aria-label="VoiceBank+DEMAND - Sample 1" class="card">
@@ -230,13 +230,13 @@ section[aria-label^="Out-of-Train"] .imgbox img{ width:100%; height:100%; object
 <audio controls="" preload="auto" src="audio/vbd_s1_muse.wav"></audio>
 <div class="imgbox"><img alt="VBD S1 MUSE spectrogram" src="img/vbd_s1_muse_spec.png"/></div>
 </div>
-<div class="col"><div class="lbl">MambafusionGAN <small>(ours)</small></div>
+<div class="col"><div class="lbl">MambaSCA-GAN <small>(ours)</small></div>
 <audio controls="" preload="auto" src="audio/vbd_s1_mamba_ours.wav"></audio>
-<div class="imgbox"><img alt="VBD S1 MambafusionGAN ours spectrogram" src="img/vbd_s1_mamba_ours_spec.png"/></div>
+<div class="imgbox"><img alt="VBD S1 MambaSCA-GAN ours spectrogram" src="img/vbd_s1_mamba_ours_spec.png"/></div>
 </div>
-<div class="col"><div class="lbl">MambafusionGAN <small>(+PCS)</small></div>
+<div class="col"><div class="lbl">MambaSCA-GAN <small>(+PCS)</small></div>
 <audio controls="" preload="auto" src="audio/vbd_s1_mamba_pcs.wav"></audio>
-<div class="imgbox"><img alt="VBD S1 MambafusionGAN +PCS spectrogram" src="img/vbd_s1_mamba_pcs_spec.png"/></div>
+<div class="imgbox"><img alt="VBD S1 MambaSCA-GAN +PCS spectrogram" src="img/vbd_s1_mamba_pcs_spec.png"/></div>
 </div>
 </div>
 </section>
@@ -263,13 +263,13 @@ section[aria-label^="Out-of-Train"] .imgbox img{ width:100%; height:100%; object
 <audio controls="" preload="auto" src="audio/vbd_s2_muse.wav"></audio>
 <div class="imgbox"><img alt="VBD S2 MUSE spectrogram" src="img/vbd_s2_muse_spec.png"/></div>
 </div>
-<div class="col"><div class="lbl">MambafusionGAN <small>(ours)</small></div>
+<div class="col"><div class="lbl">MambaSCA-GAN <small>(ours)</small></div>
 <audio controls="" preload="auto" src="audio/vbd_s2_mamba_ours.wav"></audio>
-<div class="imgbox"><img alt="VBD S2 MambafusionGAN ours spectrogram" src="img/vbd_s2_mamba_ours_spec.png"/></div>
+<div class="imgbox"><img alt="VBD S2 MambaSCA-GAN ours spectrogram" src="img/vbd_s2_mamba_ours_spec.png"/></div>
 </div>
-<div class="col"><div class="lbl">MambafusionGAN <small>(+PCS)</small></div>
+<div class="col"><div class="lbl">MambaSCA-GAN <small>(+PCS)</small></div>
 <audio controls="" preload="auto" src="audio/vbd_s2_mamba_pcs.wav"></audio>
-<div class="imgbox"><img alt="VBD S2 MambafusionGAN +PCS spectrogram" src="img/vbd_s2_mamba_pcs_spec.png"/></div>
+<div class="imgbox"><img alt="VBD S2 MambaSCA-GAN +PCS spectrogram" src="img/vbd_s2_mamba_pcs_spec.png"/></div>
 </div>
 </div>
 </section>
@@ -296,13 +296,13 @@ section[aria-label^="Out-of-Train"] .imgbox img{ width:100%; height:100%; object
 <audio controls="" preload="auto" src="audio/vbd_s3_muse.wav"></audio>
 <div class="imgbox"><img alt="VBD S3 MUSE spectrogram" src="img/vbd_s3_muse_spec.png"/></div>
 </div>
-<div class="col"><div class="lbl">MambafusionGAN <small>(ours)</small></div>
+<div class="col"><div class="lbl">MambaSCA-GAN <small>(ours)</small></div>
 <audio controls="" preload="auto" src="audio/vbd_s3_mamba_ours.wav"></audio>
-<div class="imgbox"><img alt="VBD S3 MambafusionGAN ours spectrogram" src="img/vbd_s3_mamba_ours_spec.png"/></div>
+<div class="imgbox"><img alt="VBD S3 MambaSCA-GAN ours spectrogram" src="img/vbd_s3_mamba_ours_spec.png"/></div>
 </div>
-<div class="col"><div class="lbl">MambafusionGAN <small>(+PCS)</small></div>
+<div class="col"><div class="lbl">MambaSCA-GAN <small>(+PCS)</small></div>
 <audio controls="" preload="auto" src="audio/vbd_s3_mamba_pcs.wav"></audio>
-<div class="imgbox"><img alt="VBD S3 MambafusionGAN +PCS spectrogram" src="img/vbd_s3_mamba_pcs_spec.png"/></div>
+<div class="imgbox"><img alt="VBD S3 MambaSCA-GAN +PCS spectrogram" src="img/vbd_s3_mamba_pcs_spec.png"/></div>
 </div>
 </div>
 </section>
