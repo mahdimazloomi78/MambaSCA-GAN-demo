@@ -18,7 +18,7 @@
       background:url('img/bg.jpg') center/cover no-repeat fixed;
       filter:brightness(.35) saturate(1.1);
     }
-   
+    
     body::after{
       content:""; position:fixed; inset:0; z-index:-1; backdrop-filter: blur(4px);
       background: radial-gradient(1000px 500px at 85% -10%, rgba(14,22,44,.7), transparent);
@@ -159,7 +159,12 @@ section[aria-label^="DeepXi"] .cell:hover .imgbox{
 section[aria-label^="VoiceBank+DEMAND"] .imgbox img,
 section[aria-label^="DeepXi"] .imgbox img,
 section[aria-label="SNR Comparison"] .imgbox img,
-section[aria-label^="Out-of-Train"] .imgbox img { cursor: zoom-in; }
+section[aria-label^="Out-of-Train"] .imgbox img,
+/*
+A D D E D   F O R   N E W   S E C T I O N
+*/
+section[aria-label^="Persian White Noise Comparison"] .imgbox img
+{ cursor: zoom-in; }
 
 .lightbox-backdrop.show .lightbox-frame{ cursor: zoom-out; }
 /* === end Lightbox === */
@@ -202,9 +207,10 @@ section[aria-label^="Out-of-Train"] .imgbox img{ width:100%; height:100%; object
 <body>
 <div class="wrap">
 <header>
-<h1 class="title">Single-Channel Speech Enhancement at Low-SNR using the Mamba-Integrated GAN (MambaSCA-GAN)</h1>
-<p class="authors">Mahdi Mazloomi</span> • <span>Rahil Mahdian</span> • <span>Hassan Zareian</span></p>
+<h1 class="title">MambaSCA-GAN</h1>
+<p class="authors">Mahdi Mzloomi</span> • <span>Rahil Mahdian</span> • <span>Hassan Zareian
 
+ </span></p>
 </header>
 <div class="section dataset-title">VoiceBank+DEMAND Dataset</div>
 <section aria-label="VoiceBank+DEMAND - Sample 1" class="card">
@@ -232,11 +238,11 @@ section[aria-label^="Out-of-Train"] .imgbox img{ width:100%; height:100%; object
 </div>
 <div class="col"><div class="lbl">MambaSCA-GAN <small>(ours)</small></div>
 <audio controls="" preload="auto" src="audio/vbd_s1_mamba_ours.wav"></audio>
-<div class="imgbox"><img alt="VBD S1 MambaSCA-GAN ours spectrogram" src="img/vbd_s1_mamba_ours_spec.png"/></div>
+<div class="imgbox"><img alt="VBD S1 MambafusionGAN ours spectrogram" src="img/vbd_s1_mamba_ours_spec.png"/></div>
 </div>
 <div class="col"><div class="lbl">MambaSCA-GAN <small>(+PCS)</small></div>
 <audio controls="" preload="auto" src="audio/vbd_s1_mamba_pcs.wav"></audio>
-<div class="imgbox"><img alt="VBD S1 MambaSCA-GAN +PCS spectrogram" src="img/vbd_s1_mamba_pcs_spec.png"/></div>
+<div class="imgbox"><img alt="VBD S1 MambafusionGAN +PCS spectrogram" src="img/vbd_s1_mamba_pcs_spec.png"/></div>
 </div>
 </div>
 </section>
@@ -265,11 +271,11 @@ section[aria-label^="Out-of-Train"] .imgbox img{ width:100%; height:100%; object
 </div>
 <div class="col"><div class="lbl">MambaSCA-GAN <small>(ours)</small></div>
 <audio controls="" preload="auto" src="audio/vbd_s2_mamba_ours.wav"></audio>
-<div class="imgbox"><img alt="VBD S2 MambaSCA-GAN ours spectrogram" src="img/vbd_s2_mamba_ours_spec.png"/></div>
+<div class="imgbox"><img alt="VBD S2 MambafusionGAN ours spectrogram" src="img/vbd_s2_mamba_ours_spec.png"/></div>
 </div>
-<div class="col"><div class="lbl">MambaSCA-GAN <small>(+PCS)</small></div>
+<div class="col"><div class="lbl">MambaSCA-GAN<small>(+PCS)</small></div>
 <audio controls="" preload="auto" src="audio/vbd_s2_mamba_pcs.wav"></audio>
-<div class="imgbox"><img alt="VBD S2 MambaSCA-GAN +PCS spectrogram" src="img/vbd_s2_mamba_pcs_spec.png"/></div>
+<div class="imgbox"><img alt="VBD S2 MambafusionGAN +PCS spectrogram" src="img/vbd_s2_mamba_pcs_spec.png"/></div>
 </div>
 </div>
 </section>
@@ -298,11 +304,11 @@ section[aria-label^="Out-of-Train"] .imgbox img{ width:100%; height:100%; object
 </div>
 <div class="col"><div class="lbl">MambaSCA-GAN <small>(ours)</small></div>
 <audio controls="" preload="auto" src="audio/vbd_s3_mamba_ours.wav"></audio>
-<div class="imgbox"><img alt="VBD S3 MambaSCA-GAN ours spectrogram" src="img/vbd_s3_mamba_ours_spec.png"/></div>
+<div class="imgbox"><img alt="VBD S3 MambafusionGAN ours spectrogram" src="img/vbd_s3_mamba_ours_spec.png"/></div>
 </div>
 <div class="col"><div class="lbl">MambaSCA-GAN <small>(+PCS)</small></div>
 <audio controls="" preload="auto" src="audio/vbd_s3_mamba_pcs.wav"></audio>
-<div class="imgbox"><img alt="VBD S3 MambaSCA-GAN +PCS spectrogram" src="img/vbd_s3_mamba_pcs_spec.png"/></div>
+<div class="imgbox"><img alt="VBD S3 MambafusionGAN +PCS spectrogram" src="img/vbd_s3_mamba_pcs_spec.png"/></div>
 </div>
 </div>
 </section>
@@ -747,6 +753,73 @@ section[aria-label^="Out-of-Train"] .imgbox img{ width:100%; height:100%; object
   </div></section>
 
 
+<div class="section dataset-title"></div>
+<section aria-label="Persian White Noise Comparison" class="snr-comparison">
+
+  <h1>Persian Speech Sample with White Noise</h1>
+  <div class="muted">
+    Evaluation of speech enhancement on an out-of-domain Persian sample with additive white noise.
+  </div>
+
+  <div class="table-container">
+    <div class="thead">
+      <div class="th">SNR −5 dB</div>
+      <div class="th">SNR −10 dB</div>
+    </div>
+
+    <div class="row">
+      <div class="cell">
+        <p class="title">Clean</p>
+        <audio controls preload="auto" src="white_persian/clean.wav"></audio>
+        <div class="imgbox">
+          <img alt="clean persian spectrogram" src="white_persian/clean.png">
+        </div>
+      </div>
+      <div class="cell">
+        <p class="title">Clean</p>
+        <audio controls preload="auto" src="white_persian/clean.wav"></audio>
+        <div class="imgbox">
+          <img alt="clean persian spectrogram" src="white_persian/clean.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="cell">
+        <p class="title">Noisy −5 dB</p>
+        <audio controls preload="auto" src="white_persian/noisy_speech_-5db.wav"></audio>
+        <div class="imgbox">
+          <img alt="noisy -5 dB persian spectrogram" src="white_persian/noisy_speech_-5db.png">
+        </div>
+      </div>
+      <div class="cell">
+        <p class="title">Noisy −10 dB</p>
+        <audio controls preload="auto" src="white_persian/noisy_speech_-10db.wav"></audio>
+        <div class="imgbox">
+          <img alt="noisy -10 dB persian spectrogram" src="white_persian/noisy_speech_-10db.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="cell">
+        <p class="title">Enhanced −5 dB</p>
+        <audio controls preload="auto" src="white_persian/enh2.99_speech_-5db.wav"></audio>
+        <div class="imgbox">
+          <img alt="enhanced -5 dB persian spectrogram" src="white_persian/enh2.99_speech_-5db.png">
+        </div>
+      </div>
+      <div class="cell">
+        <p class="title">Enhanced −10 dB</p>
+        <audio controls preload="auto" src="white_persian/enh2.99_speech_-10db.wav"></audio>
+        <div class="imgbox">
+          <img alt="enhanced -10 dB persian spectrogram" src="white_persian/enh2.99_speech_-10db.png">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 <footer>
 
 </footer>
@@ -788,7 +861,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // open on clicking any spectrogram image from any relevant section
   document.body.addEventListener('click', function(e){
-    const el = e.target.closest('section[aria-label^="VoiceBank+DEMAND"] .imgbox img, section[aria-label^="DeepXi"] .imgbox img, section[aria-label="SNR Comparison"] .imgbox img, section[aria-label^="Out-of-Train"] .imgbox img');
+    const el = e.target.closest('section[aria-label^="VoiceBank+DEMAND"] .imgbox img, section[aria-label^="DeepXi"] .imgbox img, section[aria-label="SNR Comparison"] .imgbox img, section[aria-label^="Out-of-Train"] .imgbox img, section[aria-label^="Persian White Noise Comparison"] .imgbox img');
     if(el){
       e.preventDefault();
       const full = el.getAttribute('data-full') || el.currentSrc || el.src;
